@@ -1,3 +1,4 @@
-# `The Rust Programming Language` を実際に手を動かしながら読む
+# Learn Rust
 
-ref: <https://doc.rust-lang.org/book/>
+- `The Rust Programming Language` を実際に手を動かしながら読む
+  - ref: <https://doc.rust-lang.org/book/>
