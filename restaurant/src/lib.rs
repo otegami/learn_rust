@@ -3,21 +3,7 @@
 use std::collections::*;
 use std::io::{self, Write};
 
-mod front_of_house {
-	pub mod hosting {
-		pub fn add_to_waitlist() {}
-
-		fn seat_at_table() {}
-	}
-
-	mod serving {
-		fn take_over() {}
-
-		fn serve_order() {}
-
-		fn take_payment() {}
-	}
-}
+mod front_of_house;
 
 mod back_of_house {
 	pub enum Appetizer {
