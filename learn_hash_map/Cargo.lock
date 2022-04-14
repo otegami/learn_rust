@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "lear_hash_map"
+name = "learn_hash_map"
 version = "0.1.0"
