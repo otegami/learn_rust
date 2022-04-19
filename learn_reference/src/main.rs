@@ -1,15 +1,42 @@
-// Lifetime Annotations in Method Definitions
-struct ImportantExcerpt<'a> {
-	part: &'a str,
-}
+// Generic Type Parameters, Trait Bounds, and Lifetimes Together
+use std::fmt::Display;
 
-impl<'a> ImportantExcerpt<'a> {
-	fn level(&self) -> i32 {
-		3
+fn longest_with_an_announcement<'a, T>(x: &'a str, y: &'a str, ann: T) -> &'a str
+where
+	T: Display,
+{
+	println!("Announcement! {}", ann);
+	if x.len() > y.len() {
+		x
+	} else {
+		y
 	}
 }
 
 fn main() {}
+
+// The Static Lifetime
+// fn main() {
+// 	let s: &'static str = "I have a static lifetime.";
+// }
+
+// // Lifetime Annotations in Method Definitions
+// struct ImportantExcerpt<'a> {
+// 	part: &'a str,
+// }
+
+// impl<'a> ImportantExcerpt<'a> {
+// 	fn level(&self) -> i32 {
+// 		3
+// 	}
+
+// 	fn announce_and_return_part(&self, announcement: &str) -> &str {
+// 		println!("Attention please: {}", announcement);
+// 		self.part
+// 	}
+// }
+
+// fn main() {}
 
 // fn main() {
 // 	let novel = String::from("Call mew Ishamel. Some years ago...");
